@@ -16,13 +16,11 @@ String msg=(String)s.getAttribute("msg");
 %>
 <table border="1">
 <tr>
-<th>Exam Title</th>
 <th>User Answer</th>
 <th>Status</th>
 </tr>
 <c:forEach items="${userexams.listuserexam}" var="i">
 <tr>
-<td>${i.ebean.title}</td>
 <td>${i.useranswer}</td>
 <td>${i.status}</td>
 </tr>
