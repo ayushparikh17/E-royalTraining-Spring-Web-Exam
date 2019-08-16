@@ -19,12 +19,15 @@ Total Marks:${userexams.listuserexam[0].ebean.tmarks}
 	<c:forEach items="${userexams.listuserexam}" var="exam" varStatus="status">
 	<tr>
 		<td>Q${status.index+1}</td>
-		<td>${exam.qbean.que}</td>
-	</tr>
-	<tr>
 		<input type="hidden" name="listuserexam[${status.index}].qbean.questionId" value="${exam.qbean.questionId}"/>
 		<input type="hidden" name="listuserexam[${status.index}].ubean.userId" value="${exam.ubean.userId}"/>
 		<input type="hidden" name="listuserexam[${status.index}].ebean.examId" value="${exam.ebean.examId}"/>
+		<input type="hidden" name="listuserexam[${status.index}].ebean.ecode" value="${exam.ebean.ecode}"/>
+		
+		<td>${exam.qbean.que}</td>
+	</tr>
+	<tr>
+		
 		<td><input type="radio" name="listuserexam[${status.index}].useranswer" value="op1">${exam.qbean.op1}</td>
 		<td><input type="radio" name="listuserexam[${status.index}].useranswer" value="op2">${exam.qbean.op2}</td>
 		<td><input type="radio" name="listuserexam[${status.index}].useranswer" value="op3">${exam.qbean.op3}</td>

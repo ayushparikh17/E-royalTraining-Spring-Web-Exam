@@ -14,22 +14,25 @@ HttpSession s=request.getSession();
 String msg=(String)s.getAttribute("msg");
 
 %>
-<table border="1">
-<tr>
+<table border="1" align="center" style=" background-color: #52ccb8;">
+<tr><th colspan="3" style="color: #cc3227;">Result</th></tr>
+<tr style="color: #c91067">
+<th>Exam Code</th>
 <th>User Answer</th>
 <th>Status</th>
 </tr>
 
 <c:forEach items="${userexams.listuserexam}" var="i">
 <tr>
+<td>${i.ebean.ecode}</td>
 <td>${i.useranswer}</td>
 <td>${i.status}</td>
 </tr>
 </c:forEach>
 
 <tr>
-<td>Result</td>
-<td><%=msg %></td>
+<td style="color: #c91067">Result</td>
+<td colspan="2" style="color: green"><%=msg %></td>
 </tr>
 </table>
 </body>
