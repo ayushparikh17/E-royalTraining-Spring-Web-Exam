@@ -19,12 +19,14 @@ String msg=(String)s.getAttribute("msg");
 <th>User Answer</th>
 <th>Status</th>
 </tr>
+
 <c:forEach items="${userexams.listuserexam}" var="i">
 <tr>
 <td>${i.useranswer}</td>
 <td>${i.status}</td>
 </tr>
 </c:forEach>
+
 <tr>
 <td>Result</td>
 <td><%=msg %></td>
